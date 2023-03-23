@@ -1,0 +1,83 @@
+{
+  "tsserver.enableJavascript": true,
+  "diagnostic.enable": true,
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.errorSign": "×",
+  "imselect.defaultInput": "com.apple.keylayout.ABC",
+  "imselect.enableStatusItem": false,
+  "imselect.enableFloating": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python", 
+    "rust", 
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascript.jsx",
+    "html",
+    "json",
+    "jsonc"
+  ],
+  "suggest.maxCompleteItemCount": 20,
+  "coc.preferences.floatActions": false,
+  "coc.preferences.promptInput": false,
+  "prettier.requireConfig": true,
+  "prettier.statusItemText": "💅  ",
+  "colors.filetypes": [
+    "*"
+  ],
+  "highlight.colors.enable": false,
+  "rust-analyzer.updates.checkOnStartup": false,
+  "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.inlayHints.enable": false,
+  "coc.preferences.extensionUpdateCheck": "never",
+  "sumneko-lua.enableNvimLuaDev": true,
+  "sourcekit.sdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk",
+  "sourcekit.targetArch": "x86_64-apple-ios15.0-simulator",
+  "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
+  "languageserver": {
+    "sourcekit-lsp": {
+      "filetypes": [
+        "swift"
+      ],
+      "command": "sourcekit-lsp"
+    },
+    "ccls": {
+      "command": "ccls",
+      "filetypes": [
+        "c",
+        "cpp",
+        "cuda",
+        "objc",
+        "objcpp"
+      ],
+      "rootPatterns": [
+        ".ccls-root",
+        "compile_commands.json"
+      ],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupprt": true
+        },
+        "clang": {
+          "extraArgs": [
+            "-fmodules",
+            "-fobjc-arc",
+            "-target",
+            "x86_64-apple-ios15.0-simulator",
+            "-isysroot",
+            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk",
+            "-F",
+            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/System/Library/Frameworks",
+            "-I",
+            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include"
+          ]
+        }
+      }
+    }
+  },
+  "Lua.telemetry.enable": true
+}

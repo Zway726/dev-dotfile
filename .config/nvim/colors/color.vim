@@ -20,6 +20,7 @@ if (has('termguicolors'))
   let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " 背景色
 endif
 
+let g:sonokai_style = 'default'
 colorscheme spring-night
 set background=dark
 hi LineNr guibg=NONE

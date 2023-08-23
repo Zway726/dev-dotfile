@@ -98,9 +98,11 @@ set_stop({
     typescript = 2,
     html = 2,
     css = 2,
+    swift = 2,
     json = 2,
     objc = 4
 })
+
 
 vim.cmd([[
 lang en_US.UTF-8

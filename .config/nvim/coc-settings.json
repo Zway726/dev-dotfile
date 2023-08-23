@@ -29,27 +29,27 @@
   "highlight.colors.enable": false,
   "rust-analyzer.updates.checkOnStartup": false,
   "rust-analyzer.updates.prompt": false,
-  "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
   "coc.preferences.extensionUpdateCheck": "never",
   "sumneko-lua.enableNvimLuaDev": true,
-  "sourcekit.sdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk",
-  "sourcekit.targetArch": "x86_64-apple-ios15.0-simulator",
-  "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
+  "python.pythonPath": "python",
   "languageserver": {
     "sourcekit-lsp": {
       "filetypes": [
-        "swift"
+        "swift",
+        "c",
+        "cpp",
+        "objc",
+        "objcpp"
       ],
       "command": "sourcekit-lsp"
     },
     "ccls": {
       "command": "ccls",
       "filetypes": [
-        "c",
-        "cpp",
-        "cuda",
-        "objc",
-        "objcpp"
       ],
       "rootPatterns": [
         ".ccls-root",
@@ -58,23 +58,6 @@
       "initializationOptions": {
         "cache": {
           "directory": ".ccls-cache"
-        },
-        "client": {
-          "snippetSupprt": true
-        },
-        "clang": {
-          "extraArgs": [
-            "-fmodules",
-            "-fobjc-arc",
-            "-target",
-            "x86_64-apple-ios15.0-simulator",
-            "-isysroot",
-            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk",
-            "-F",
-            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/System/Library/Frameworks",
-            "-I",
-            "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator15.0.sdk/usr/include"
-          ]
         }
       }
     }

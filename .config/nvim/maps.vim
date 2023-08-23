@@ -1,4 +1,5 @@
-let mapleader = ' ' " The default leader is ' '
+
+let mapleader = ' '
 let maplocalleader = ',' " The default local leader is ','
 
 nnoremap <Leader>q :q<CR>
@@ -48,3 +49,12 @@ nnoremap <Leader>gb :Git blame<CR>
 " to the start/end of line
 nnoremap ;h 0
 nnoremap ;l $
+
+" auto close bracket
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap <expr> ) getline('.')[getpos('.')[2] - 1] == ')' ? '<Right>' : ')'

@@ -2,10 +2,10 @@ brew install fzf
 brew install the_silver_searcher
 brew install ranger
 
-ln -sf "$(pwd)/.config/nvim" ~/.config
-ln -sf "$(pwd)/.config/ranger" ~/.config
-ln -sf "$(pwd)/.config/alacritty" ~/.config
-ln -sf "$(pwd)/.zshrc" ~/.zshrc
+ln -sf "$(pwd)/config/nvim" ~/.config
+ln -sf "$(pwd)/config/ranger" ~/.config
+ln -sf "$(pwd)/config/alacritty" ~/.config
+ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
 
 vim +PlugInstall +qall
 

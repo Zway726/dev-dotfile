@@ -68,6 +68,7 @@ vim.api.nvim_create_autocmd(
 -- work with vim quickfix list
 vim.cmd("packadd! cfilter")
 
+vim.wo.signcolumn = "yes"
 
 -- fzf preview window size 
 vim.g.fzf_preview_window = {"up:40%", "ctrl-/"}

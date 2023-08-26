@@ -22,7 +22,6 @@ if exists('+termguicolors')
   let &t_8b = '\<esc>[48;2;%lu;%lu;%lum' " background color
 endif
 
-colorscheme spring-night
 set background=dark
 hi LineNr guibg=NONE
 hi SignColumn guibg=NONE

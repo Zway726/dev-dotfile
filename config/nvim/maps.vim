@@ -34,7 +34,6 @@ map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR>
 
 " reload nvim 的配置文件
 nnoremap <leader>r :source $MYVIMRC<CR>
-nnoremap <silent> <leader>e :source $MYVIMRC<CR>
 
 " terminal mode
 tnoremap <C-W> <C-\>
@@ -49,16 +48,3 @@ nnoremap <Leader>gb :Git blame<CR>
 " to the start/end of line
 nnoremap ;h 0
 nnoremap ;l $
-
-" auto close bracket
-inoremap (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
-inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
-inoremap [ []<left>
-inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : ")"
-inoremap { {}<left>
-inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : ")"
-inoremap {<CR> {<CR>}<ESC>O

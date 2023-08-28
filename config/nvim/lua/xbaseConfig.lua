@@ -8,7 +8,10 @@ local xbase_config = {
   --- filetypes = { "swift" },
   --- root_dir = pattern("Package.swift", ".git", "project.yml", "Project.swift"),
   --- }
-  sourcekit = nil, -- Disabled by default (xbase will not call it for you)
+  sourcekit = {
+    cmd = { "sourcekit-lsp", "--log-level", "error" },
+    filetypes = { "swift", "c", "cpp", "objc", "objcpp" },
+  }, -- Disabled by default (xbase will not call it for you)
   --- Statusline provider configurations
   statusline = {
     watching = { icon = "", color = "#1abc9c" },

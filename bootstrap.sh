@@ -7,7 +7,5 @@ ln -sf "$(pwd)/config/ranger" ~/.config
 ln -sf "$(pwd)/config/alacritty" ~/.config
 ln -sf "$(pwd)/tmux.conf" ~/.tmux.conf
 
-vim +PlugInstall +qall
-
 # disable font smoothing in alacritty
 default write -org.alacritty AppleFontSmoothing -int 0

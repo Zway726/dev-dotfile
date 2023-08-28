@@ -28,6 +28,10 @@ local _config = function ()
       ['rust-analyzer'] = {},
     },
   }
+  lspconfig.sourcekit.setup {
+    capabilities = capabilities,
+    cmd = { 'sourcekit-lsp' }
+  }
 
 
   -- Global mappings.

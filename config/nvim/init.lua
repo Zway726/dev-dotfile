@@ -69,9 +69,6 @@ vim.cmd("packadd! cfilter")
 
 vim.wo.signcolumn = "yes"
 
--- fzf preview window size
-vim.g.fzf_preview_window = { "up:40%", "ctrl-/" }
-
 -- set stop for specific filetype
 local function set_stop(setting_table)
   for filetype, stop_num in pairs(setting_table) do
@@ -105,7 +102,6 @@ vim.cmd([[
 lang en_US.UTF-8
 filetype plugin indent on
 exec "nohlsearch"
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Imports
 runtime ./colors/color.vim

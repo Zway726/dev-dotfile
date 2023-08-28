@@ -27,12 +27,9 @@ require("lazy").setup({
   "tpope/vim-commentary",
 
   require("nerdtree"),
-
-  "junegunn/fzf",
-  "junegunn/fzf.vim",
+  require("telescope"),
 
   "nvim-lua/plenary.nvim",
-  "jiangmiao/auto-pairs",
 
   { "folke/neodev.nvim",  ft = "lua" },
 

@@ -25,15 +25,8 @@ nnoremap <C-H> <C-W><C-H>
 noremap j gj
 noremap k gk
 
-" Split window
-nmap ss :split<CR><C-w>w
-nmap sv :vsplit<CR><C-w>w
-
 " Find merge conflict markers
 map <leader>fx /\v^[<\|=>]{7}( .*\|$)<CR> 
-
-" reload nvim 的配置文件
-nnoremap <leader>r :source $MYVIMRC<CR>
 
 " terminal mode
 tnoremap <C-W> <C-\>

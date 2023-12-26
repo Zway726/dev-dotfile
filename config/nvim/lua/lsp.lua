@@ -15,6 +15,9 @@ local _config = function ()
     capabilities = capabilities,
     settings = {
       Lua = {
+        diagnostics = {
+          disable = {"missing-fields", "incomplete-signature-doc"}
+        },
         completion = {
           callSnippet = "Replace"
         }

@@ -50,7 +50,7 @@ require("lazy").setup({
   --   end
   -- },
   require("completion"),
-  require("xbaseConfig"),
+  -- require("xbaseConfig"),
   require("ranger"),
   require("lualine-config"),
 }, {

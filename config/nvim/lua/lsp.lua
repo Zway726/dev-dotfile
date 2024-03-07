@@ -28,12 +28,20 @@ local _config = function ()
     -- Server-specific settings. See `:help lspconfig-setup`
     capabilities = capabilities,
     settings = {
-      ['rust-analyzer'] = {},
+      ['rust-analyzer'] = {
+        cargo = {
+          buildScripts = {
+            enable = true
+          }
+        }
+      },
     },
   }
   lspconfig.sourcekit.setup {
     capabilities = capabilities,
-    cmd = { 'sourcekit-lsp' }
+    cmd = { 'sourcekit-lsp' },
+    filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp", "objc" },
+    root_dir = lspconfig.util.root_pattern("Package.swift", ".git", "buildServer.json")
   }
 
 

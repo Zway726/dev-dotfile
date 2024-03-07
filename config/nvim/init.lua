@@ -91,7 +91,8 @@ set_stop({
   swift = 2,
   json = 2,
   objc = 4,
-  lua = 2
+  lua = 2,
+  proto = 2,
 })
 
 vim.cmd([[runtime ./maps.vim]])

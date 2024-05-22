@@ -73,11 +73,11 @@ vim.wo.signcolumn = "yes"
 local function set_stop(setting_table)
   for filetype, stop_num in pairs(setting_table) do
     vim.api.nvim_create_autocmd(
-      { "FileType " },
+      { "FileType" },
       { pattern = filetype, command = "setlocal tabstop=" .. stop_num }
     )
     vim.api.nvim_create_autocmd(
-      { "FileType " },
+      { "FileType" },
       { pattern = filetype, command = "setlocal shiftwidth=" .. stop_num }
     )
   end

@@ -33,7 +33,6 @@ require("lazy").setup({
 
   { "folke/neodev.nvim",  ft = "lua" },
 
-  { "rust-lang/rust.vim", ft = "rust" },
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
@@ -50,8 +49,6 @@ require("lazy").setup({
   --   end
   -- },
   require("completion"),
-  -- require("xbaseConfig"),
-  require("ranger"),
   require("lualine-config"),
 }, {
   git = {

@@ -94,7 +94,14 @@ set_stop({
   lua = 2,
   proto = 2,
 })
-
+vim.api.nvim_create_autocmd("TextYankPost", {
+	pattern = { "*" },
+	callback = function()
+		vim.highlight.on_yank({
+			timeout = 400,
+		})
+	end,
+})
 vim.cmd([[runtime ./maps.vim]])
 
 require("plug")

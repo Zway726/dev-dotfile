@@ -1,3 +1,5 @@
 config/nvim/lua/.luarc.json
 config/nvim/.luarc.json
+config/nvim/lua/untracked_config
+config/nvim/lazy-lock.json
 

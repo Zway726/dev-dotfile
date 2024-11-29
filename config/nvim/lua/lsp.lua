@@ -6,7 +6,7 @@ local _config = function ()
   lspconfig.pyright.setup {
     capabilities = capabilities
   }
-  lspconfig.tsserver.setup {
+  lspconfig.ts_ls.setup {
     capabilities = capabilities
   }
 
@@ -29,6 +29,7 @@ local _config = function ()
     capabilities = capabilities,
     settings = {
       ['rust-analyzer'] = {
+        formatOnType = true,
         cargo = {
           buildScripts = {
             enable = true
@@ -42,6 +43,22 @@ local _config = function ()
     cmd = { 'sourcekit-lsp' },
     filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp", "objc" },
     root_dir = lspconfig.util.root_pattern("Package.swift", ".git", "buildServer.json")
+  }
+  lspconfig.ruby_lsp.setup {
+    capabilities = capabilities,
+    init_options = {
+      -- enabled_features = {
+      --   code_action = true,
+      --   completion = true,
+      --   definition = true,
+      --   diagnostics = true,
+      --   hover = true,
+      --   type_hierarchy = true,
+      --   workspace_symbol = true,
+      -- },
+      formatter = 'standard',
+      linters = { 'standard' },
+    }
   }
 
 

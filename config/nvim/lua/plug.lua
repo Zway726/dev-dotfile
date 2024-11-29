@@ -27,7 +27,7 @@ require("lazy").setup({
   "tpope/vim-commentary",
 
   require("nerdtree"),
-  require("telescope"),
+  require("telescope-config"),
 
   "nvim-lua/plenary.nvim",
 
@@ -50,6 +50,7 @@ require("lazy").setup({
   -- },
   require("completion"),
   require("lualine-config"),
+  require('untracked-config').plugs,
 }, {
   git = {
     url_format = "git@github.com:%s.git"

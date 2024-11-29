@@ -69,6 +69,8 @@ vim.cmd("packadd! cfilter")
 
 vim.wo.signcolumn = "yes"
 
+require('untracked-config').settings()
+
 -- set stop for specific filetype
 local function set_stop(setting_table)
   for filetype, stop_num in pairs(setting_table) do
@@ -84,15 +86,13 @@ local function set_stop(setting_table)
 end
 
 set_stop({
-  javascript = 2,
-  typescript = 2,
   html = 2,
   css = 2,
-  swift = 2,
   json = 2,
   objc = 4,
   lua = 2,
   proto = 2,
+  python = 2,
 })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = { "*" },

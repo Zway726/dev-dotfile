@@ -1,3 +1,4 @@
+local util = require('util')
 local function telescope_cmd(cmd)
   local theme = require 'telescope.themes'.get_ivy()
   theme['layout_config']['height'] = math.floor(vim.o.lines * 0.4)
@@ -38,5 +39,15 @@ return
   config = function()
     vim.keymap.set("n", "<C-f>", function() telescope_cmd("live_grep") end, {})
     vim.keymap.set("n", "<C-o>", function() telescope_cmd("find_files") end, {})
+    require("telescope").setup({
+      pickers = {
+        find_files = {
+          no_ignore = true
+        },
+        live_grep = {
+          additional_args = { "--no-ignore" }
+        }
+      }
+    })
   end
 }

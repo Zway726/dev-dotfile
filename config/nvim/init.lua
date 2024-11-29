@@ -93,6 +93,7 @@ set_stop({
   objc = 4,
   lua = 2,
   proto = 2,
+  python = 2,
 })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = { "*" },

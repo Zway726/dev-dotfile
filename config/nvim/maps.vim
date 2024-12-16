@@ -50,3 +50,6 @@ inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]
 inoremap { {}<left>
 inoremap <expr> }  strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 inoremap {<CR> {<CR>}<ESC>O
+
+"disable cmd history shortcut
+nnoremap q: <nop>

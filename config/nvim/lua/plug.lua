@@ -14,15 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- colorscheme
-  {
-    "rhysd/vim-color-spring-night",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd([[colorscheme spring-night]])
-    end
-  },
-
+  require('colorscheme-config'),
   "tpope/vim-fugitive",
   "tpope/vim-commentary",
 

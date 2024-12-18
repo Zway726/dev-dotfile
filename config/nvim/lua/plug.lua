@@ -23,7 +23,19 @@ require("lazy").setup({
 
   "nvim-lua/plenary.nvim",
 
-  { "folke/neodev.nvim",  ft = "lua" },
+  -- { "folke/neodev.nvim",  ft = "lua" },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua",
+    opts = {
+      library = {
+        {
+          vim.env.VIMRUNTIME,
+          "${3rd}/luv/library"
+        }
+      }
+    }
+  },
 
   {
     "iamcco/markdown-preview.nvim",

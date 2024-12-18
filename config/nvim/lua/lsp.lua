@@ -10,7 +10,7 @@ local _config = function ()
     capabilities = capabilities
   }
 
-  require("neodev").setup({})
+  -- require("neodev").setup({})
   lspconfig.lua_ls.setup {
     capabilities = capabilities,
     settings = {

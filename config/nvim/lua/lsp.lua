@@ -42,7 +42,7 @@ local _config = function ()
     capabilities = capabilities,
     cmd = { 'sourcekit-lsp' },
     filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp", "objc" },
-    root_dir = lspconfig.util.root_pattern("Package.swift", ".git", "buildServer.json")
+    root_dir = lspconfig.util.root_pattern("Package.swift", ".git", "buildServer.json", "compile_commands.json")
   }
   lspconfig.ruby_lsp.setup {
     capabilities = capabilities,

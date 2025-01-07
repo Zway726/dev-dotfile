@@ -17,11 +17,13 @@ require("lazy").setup({
   require('colorscheme-config'),
   "tpope/vim-fugitive",
   "tpope/vim-commentary",
+  { "vimjas/vim-python-pep8-indent", ft = "python", },
 
   require("nerdtree"),
   require("telescope-config"),
 
   "nvim-lua/plenary.nvim",
+  { "NMAC427/guess-indent.nvim", config = true },
 
   -- { "folke/neodev.nvim",  ft = "lua" },
   {
@@ -42,6 +44,7 @@ require("lazy").setup({
     build = "cd app && yarn install",
     ft = "markdown"
   },
+  { "lewis6991/gitsigns.nvim", config = true },
   require("lsp"),
   -- fidget may spam the screen when bunch of messages coming out, so I just replace it
   -- {

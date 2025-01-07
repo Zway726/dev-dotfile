@@ -23,7 +23,11 @@ end
 
 function M.merge_table(table1, table2)
   for key, value in pairs(table2) do
-    table1[key] = value
+    if type(key) == "number" then
+      table.insert(table1, value)
+    else
+      table1[key] = value
+    end
   end
   return table1
 end

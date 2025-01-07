@@ -93,6 +93,9 @@ set_stop({
   lua = 2,
   proto = 2,
   python = 2,
+  nix = 2,
+  javascript = 2,
+  typescript = 2
 })
 vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = { "*" },
@@ -120,3 +123,9 @@ runtime ./colors/color.vim
 for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
   vim.api.nvim_set_hl(0, group, {})
 end
+
+vim.cmd([[
+  highlight GitSignsChange guibg=None
+  highlight GitSignsAdd guibg=None
+  highlight GitSignsDelete guibg=None
+]])

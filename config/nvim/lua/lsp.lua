@@ -10,6 +10,12 @@ local _config = function ()
     capabilities = capabilities
   }
 
+  local client_cap = vim.lsp.protocol.make_client_capabilities()
+  client_cap.textDocument.completion.completionItem.snippetSupport = true
+  lspconfig.html.setup {
+    capabilities = client_cap
+  }
+
   -- require("neodev").setup({})
   lspconfig.lua_ls.setup {
     capabilities = capabilities,
@@ -38,12 +44,9 @@ local _config = function ()
       },
     },
   }
-  lspconfig.sourcekit.setup {
-    capabilities = capabilities,
-    cmd = { 'sourcekit-lsp' },
-    filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp", "objc" },
-    root_dir = lspconfig.util.root_pattern("Package.swift", ".git", "buildServer.json", "compile_commands.json")
-  }
+
+  require('lang_config.sourcekit-config')
+
   lspconfig.ruby_lsp.setup {
     capabilities = capabilities,
     init_options = {
@@ -61,6 +64,7 @@ local _config = function ()
     }
   }
 
+  lspconfig.nil_ls.setup{}
 
   -- Global mappings.
   -- See `:help vim.diagnostic.*` for documentation on any of the below functions

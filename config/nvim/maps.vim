@@ -53,3 +53,7 @@ inoremap {<CR> {<CR>}<ESC>O
 
 "disable cmd history shortcut
 map q: <nop>
+
+" go forword and backword
+noremap <C-;> <C-o>
+noremap <C-'> <C-i>
